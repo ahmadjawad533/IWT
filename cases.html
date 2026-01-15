@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View all verified active cases at Ismail Welfare Trust. Support students, medical patients, families needing ration, and emergency cases.">
+    <title>Active Cases - Ismail Welfare Trust</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="Whitelogo.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="Whitelogo.png?v=2">
+    <link rel="shortcut icon" href="Whitelogo.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="Whitelogo.png?v=2">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cases.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Cases Page - Slide from Right Animation */
+        body { animation: casesPageLoad 0.8s ease-out; }
+        @keyframes casesPageLoad {
+            from { opacity: 0; transform: translateX(100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+</head>
+<body class="cases-page">
+    <a href="donate.html" class="sticky-donate-btn">
+        <i class="fas fa-heart"></i> Donate Now
+    </a>
+
+    <a href="https://wa.me/923001234567" target="_blank" class="whatsapp-widget" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <img src="Whitelogo.png" alt="Ismail Welfare Trust Logo">
+                        <span>Ismail Welfare Trust</span>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cases.html" class="active">Active Cases</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="donate.html">How to Donate</a></li>
+                        <li><a href="reports.html">Transparency</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="donate.html" class="btn-primary-nav">Donate Now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Active Cases</h1>
+            <p>Every case is thoroughly verified. 100% of your donation goes directly to the beneficiary.</p>
+        </div>
+    </section>
+
+    <section class="cases-section">
+        <div class="container">
+            <div class="cases-controls">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Cases</button>
+                    <button class="filter-btn" data-filter="student">Students</button>
+                    <button class="filter-btn" data-filter="medical">Medical</button>
+                    <button class="filter-btn" data-filter="ration">Ration</button>
+                    <button class="filter-btn" data-filter="emergency">Emergency</button>
+                </div>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="search-input" placeholder="Search cases...">
+                </div>
+            </div>
+
+            <div class="cases-grid">
+                <!-- Student Cases -->
+                <div class="case-card" data-category="student" id="case-stu-001">
+                    <div class="case-image">
+                        <img src="images/cases/student-placeholder.jpg" alt="Student Case" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%232E7D32%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22white%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22%3EStudent%3C/text%3E%3C/svg%3E'">
+                        <span class="case-category student">Student</span>
+                    </div>
+                    <div class="case-content">
+                        <h3>Fatima - IWT-STU-001</h3>
+                        <p>Brilliant student needs support for university fees. Orphan with excellent academic record studying Computer Science.</p>
+                        <div class="case-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>Rs. 22,500 raised</span>
+                                <span>Rs. 50,000 needed</span>
+                            </div>
+                        </div>
+                        <div class="case-actions">
+                            <a href="donate.html?case=STU-001" class="btn btn-primary btn-block">Donate to This Case</a>
+                            <button class="btn-icon share-btn" data-title="Help Student Fatima">
+                                <i class="fas fa-share-alt"></i> Share
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card" data-category="student">
+                    <div class="case-image">
+                        <img src="images/cases/student-placeholder.jpg" alt="Student Case" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%232E7D32%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22white%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22%3EStudent%3C/text%3E%3C/svg%3E'">
+                        <span class="case-category student">Student</span>
+                    </div>
+                    <div class="case-content">
+                        <h3>Ali - IWT-STU-002</h3>
+                        <p>Talented student from rural area needs support for intermediate education. Dreams of becoming an engineer.</p>
+                        <div class="case-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>Rs. 18,000 raised</span>
+                                <span>Rs. 30,000 needed</span>
+                            </div>
+                        </div>
+                        <div class="case-actions">
+                            <a href="donate.html?case=STU-002" class="btn btn-primary btn-block">Donate to This Case</a>
+                            <button class="btn-icon share-btn" data-title="Help Student Ali">
+                                <i class="fas fa-share-alt"></i> Share
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medical Cases -->
+                <div class="case-card" data-category="medical" id="case-med-003">
+                    <div class="case-image">
+                        <img src="images/cases/medical-placeholder.jpg" alt="Medical Case" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23D32F2F%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22white%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22%3EMedical%3C/text%3E%3C/svg%3E'">
+                        <span class="case-category medical">Medical</span>
+                    </div>
+                    <div class="case-content">
+                        <h3>Ahmed - IWT-MED-003</h3>
+                        <p>Urgent kidney treatment required. Father of 3 children, sole breadwinner unable to work during treatment.</p>
+                        <div class="case-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 30%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>Rs. 60,000 raised</span>
+                                <span>Rs. 200,000 needed</span>
+                            </div>
+                        </div>
+                        <div class="case-actions">
+                            <a href="donate.html?case=MED-003" class="btn btn-primary btn-block">Donate to This Case</a>
+                            <button class="btn-icon share-btn" data-title="Help Ahmed's Medical Treatment">
+                                <i class="fas fa-share-alt"></i> Share
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card" data-category="medical">
+                    <div class="case-image">
+                        <img src="images/cases/medical-placeholder.jpg" alt="Medical Case" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23D32F2F%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22white%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22%3EMedical%3C/text%3E%3C/svg%3E'">
+                        <span class="case-category medical">Medical</span>
+                    </div>
+                    <div class="case-content">
+                        <h3>Zainab - IWT-MED-004</h3>
+                        <p>Young girl needs heart surgery. Family has exhausted all savings. Time-sensitive case requiring immediate support.</p>
+                        <div class="case-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 20%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>Rs. 80,000 raised</span>
+                                <span>Rs. 400,000 needed</span>
+                            </div>
+                        </div>
+                        <div class="case-actions">
+                            <a href="donate.html?case=MED-004" class="btn btn-primary btn-block">Donate to This Case</a>
+                            <button class="btn-icon share-btn" data-title="Help Zainab's Heart Surgery">
+                                <i class="fas fa-share-alt"></i> Share
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ration Cases -->
+                <div class="case-card" data-category="ration" id="case-rat-007">
+                    <div class="case-image">
+                        <img src="images/cases/ration-placeholder.jpg" alt="Ration Case" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23F57C00%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22white%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22%3ERation%3C/text%3E%3C/svg%3E'">
+                        <span class="case-category ration">Ration</span>
+                    </div>
+                    <div class="case-content">
+                        <h3>Widow Khadija - IWT-RAT-007</h3>
+                        <p>Widow with 4 children needs monthly ration support. Husband passed away recently, struggling to make ends meet.</p>
+                        <div class="case-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>Rs. 10,500 raised</span>
+                                <span>Rs. 15,000 needed</span>
+                            </div>
+                        </div>
+                        <div class="case-actions">
+                            <a href="donate.html?case=RAT-007" class="btn btn-primary btn-block">Donate to This Case</a>
+                            <button class="btn-icon share-btn" data-title="Help Widow Khadija">
+                                <i class="fas fa-share-alt"></i> Share
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card" data-category="ration">
+                    <div class="case-image">
+                        <img src="images/cases/ration-placeholder.jpg" alt="Ration Case" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23F57C00%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22white%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22%3ERation%3C/text%3E%3C/svg%3E'">
+                        <span class="case-category ration">Ration</span>
+                    </div>
+                    <div class="case-content">
+                        <h3>Elderly Couple - IWT-RAT-008</h3>
+                        <p>Elderly couple with no children or support system. Need monthly ration assistance for basic survival.</p>
+                        <div class="case-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>Rs. 8,000 raised</span>
+                                <span>Rs. 20,000 needed</span>
+                            </div>
+                        </div>
+                        <div class="case-actions">
+                            <a href="donate.html?case=RAT-008" class="btn btn-primary btn-block">Donate to This Case</a>
+                            <button class="btn-icon share-btn" data-title="Help Elderly Couple">
+                                <i class="fas fa-share-alt"></i> Share
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Cases -->
+                <div class="case-card" data-category="emergency" id="case-emg-002">
+                    <div class="case-image">
+                        <img src="images/cases/emergency-placeholder.jpg" alt="Emergency Case" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23C62828%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22white%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22%3EEmergency%3C/text%3E%3C/svg%3E'">
+                        <span class="case-category emergency">Emergency</span>
+                    </div>
+                    <div class="case-content">
+                        <h3>Hassan - IWT-EMG-002</h3>
+                        <p>House fire victim needs immediate shelter and basic necessities for family of 6. Lost everything in the fire.</p>
+                        <div class="case-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 15%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>Rs. 12,000 raised</span>
+                                <span>Rs. 80,000 needed</span>
+                            </div>
+                        </div>
+                        <div class="case-actions">
+                            <a href="donate.html?case=EMG-002" class="btn btn-primary btn-block">Donate to This Case</a>
+                            <button class="btn-icon share-btn" data-title="Help Fire Victim Hassan">
+                                <i class="fas fa-share-alt"></i> Share
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card" data-category="emergency">
+                    <div class="case-image">
+                        <img src="images/cases/emergency-placeholder.jpg" alt="Emergency Case" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23C62828%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22white%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22%3EEmergency%3C/text%3E%3C/svg%3E'">
+                        <span class="case-category emergency">Emergency</span>
+                    </div>
+                    <div class="case-content">
+                        <h3>Flood Victims - IWT-EMG-005</h3>
+                        <p>Family displaced by recent floods. Need immediate shelter, food, and clothing for 8 family members.</p>
+                        <div class="case-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 25%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>Rs. 25,000 raised</span>
+                                <span>Rs. 100,000 needed</span>
+                            </div>
+                        </div>
+                        <div class="case-actions">
+                            <a href="donate.html?case=EMG-005" class="btn btn-primary btn-block">Donate to This Case</a>
+                            <button class="btn-icon share-btn" data-title="Help Flood Victims">
+                                <i class="fas fa-share-alt"></i> Share
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Can't Decide Which Case to Support?</h2>
+                <p>Donate to our General Fund and we'll distribute it to the most urgent cases</p>
+                <a href="donate.html" class="btn btn-warning btn-large">Donate to General Fund</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Ismail Welfare Trust</h3>
+                    <p>100% Transparent | Verified Cases Only</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="cases.html">Active Cases</a></li>
+                        <li><a href="donate.html">How to Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="reports.html">Transparency Reports</a></li>
+                        <li><a href="success-stories.html">Success Stories</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="islamic-guidelines.html">Islamic Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Monthly Updates</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <p class="newsletter-note">Get monthly impact reports in your inbox</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ismail Welfare Trust. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

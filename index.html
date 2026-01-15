@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ismail Welfare Trust - 100% transparent Islamic charity in Pakistan. Donate Zakat, Sadaqah to verified beneficiaries. Monthly reports, verified cases.">
+    <meta name="keywords" content="zakat Pakistan, Islamic charity, sadaqah, verified donations, transparent charity">
+    <title>Ismail Welfare Trust - Transforming Lives Through Verified Support</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="Whitelogo.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="Whitelogo.png?v=2">
+    <link rel="shortcut icon" href="Whitelogo.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="Whitelogo.png?v=2">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Home Page - Fade and Zoom Animation */
+        body { animation: homePageLoad 1s ease-out; }
+        @keyframes homePageLoad {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="home-page">
+    <!-- Sticky Donate Button -->
+    <a href="donate.html" class="sticky-donate-btn">
+        <i class="fas fa-heart"></i> Donate Now
+    </a>
+
+    <!-- WhatsApp Widget -->
+    <a href="https://wa.me/923001234567" target="_blank" class="whatsapp-widget" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <img src="Whitelogo.png" alt="Ismail Welfare Trust Logo">
+                        <span>Ismail Welfare Trust</span>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="cases.html">Active Cases</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="donate.html">How to Donate</a></li>
+                        <li><a href="reports.html">Transparency</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="donate.html" class="btn-primary-nav">Donate Now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-pattern"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Transforming Lives Through Verified Support</h1>
+                <p class="hero-subtitle">100% Transparency, 100% Impact</p>
+                <div class="hero-buttons">
+                    <a href="donate.html" class="btn btn-primary btn-large">Donate Now</a>
+                    <a href="cases.html" class="btn btn-secondary btn-large">View Active Cases</a>
+                </div>
+                <div class="trust-badges">
+                    <div class="badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>100% Zakat Compliant</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Verified Cases Only</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Monthly Reports</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Counter -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3 class="stat-number" data-target="247">0</h3>
+                    <p>Families Helped</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3 class="stat-number">Rs. <span data-target="3500000">0</span></h3>
+                    <p>Total Donated</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-folder-open"></i>
+                    <h3 class="stat-number" data-target="18">0</h3>
+                    <p>Active Cases</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-check-double"></i>
+                    <h3 class="stat-number" data-target="229">0</h3>
+                    <p>Cases Completed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Urgent Case Banner -->
+    <section class="urgent-banner">
+        <div class="container">
+            <div class="urgent-content">
+                <span class="urgent-badge">URGENT</span>
+                <h3>Help Student Fatima Complete Her Education - Only Rs. 15,000 Needed!</h3>
+                <a href="cases.html#case-stu-001" class="btn btn-warning">Help Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Active Cases -->
+    <section class="featured-cases">
+        <div class="container">
+            <div class="section-header">
+                <h2>Active Cases Needing Your Support</h2>
+                <p>Every case is thoroughly verified. 100% of your donation goes directly to the beneficiary.</p>
+            </div>
+            <div class="cases-grid">
+                <!-- Case 1 -->
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="images/cases/student-placeholder.jpg" alt="Student Case" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%232E7D32%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22white%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22%3EStudent%3C/text%3E%3C/svg%3E'">
+                        <span class="case-category student">Student</span>
+                    </div>
+                    <div class="case-content">
+                        <h3>Fatima - IWT-STU-001</h3>
+                        <p>Brilliant student needs support for university fees. Orphan with excellent academic record.</p>
+                        <div class="case-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>Rs. 22,500 raised</span>
+                                <span>Rs. 50,000 needed</span>
+                            </div>
+                        </div>
+                        <a href="cases.html#case-stu-001" class="btn btn-primary btn-block">Donate to This Case</a>
+                    </div>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="images/cases/medical-placeholder.jpg" alt="Medical Case" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23D32F2F%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22white%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22%3EMedical%3C/text%3E%3C/svg%3E'">
+                        <span class="case-category medical">Medical</span>
+                    </div>
+                    <div class="case-content">
+                        <h3>Ahmed - IWT-MED-003</h3>
+                        <p>Urgent kidney treatment required. Father of 3 children, sole breadwinner unable to work.</p>
+                        <div class="case-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 30%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>Rs. 60,000 raised</span>
+                                <span>Rs. 200,000 needed</span>
+                            </div>
+                        </div>
+                        <a href="cases.html#case-med-003" class="btn btn-primary btn-block">Donate to This Case</a>
+                    </div>
+                </div>
+
+                <!-- Case 3 -->
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="images/cases/ration-placeholder.jpg" alt="Ration Case" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23F57C00%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22white%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22%3ERation%3C/text%3E%3C/svg%3E'">
+                        <span class="case-category ration">Ration</span>
+                    </div>
+                    <div class="case-content">
+                        <h3>Widow Khadija - IWT-RAT-007</h3>
+                        <p>Widow with 4 children needs monthly ration support. Husband passed away recently.</p>
+                        <div class="case-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>Rs. 10,500 raised</span>
+                                <span>Rs. 15,000 needed</span>
+                            </div>
+                        </div>
+                        <a href="cases.html#case-rat-007" class="btn btn-primary btn-block">Donate to This Case</a>
+                    </div>
+                </div>
+
+                <!-- Case 4 -->
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="images/cases/emergency-placeholder.jpg" alt="Emergency Case" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23C62828%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22white%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22%3EEmergency%3C/text%3E%3C/svg%3E'">
+                        <span class="case-category emergency">Emergency</span>
+                    </div>
+                    <div class="case-content">
+                        <h3>Hassan - IWT-EMG-002</h3>
+                        <p>House fire victim needs immediate shelter and basic necessities for family of 6.</p>
+                        <div class="case-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 15%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>Rs. 12,000 raised</span>
+                                <span>Rs. 80,000 needed</span>
+                            </div>
+                        </div>
+                        <a href="cases.html#case-emg-002" class="btn btn-primary btn-block">Donate to This Case</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="cases.html" class="btn btn-secondary btn-large">View All Cases</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Our simple 3-step process ensures your donation reaches those who truly need it</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Apply</h3>
+                    <p>Beneficiaries submit applications with complete documentation and proof of need.</p>
+                </div>
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-search"></i>
+                    <h3>Verify</h3>
+                    <p>Our team conducts thorough verification including home visits and document checks.</p>
+                </div>
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Support</h3>
+                    <p>Verified cases are published. Donors contribute directly. We provide regular updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="success-stories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Success Stories</h2>
+                <p>Real impact, real lives transformed</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Alhamdulillah, IWT helped me complete my surgery. I can now work again and support my family. May Allah bless all the donors."</p>
+                        <div class="testimonial-author">
+                            <h4>Muhammad Ali</h4>
+                            <span>Medical Case - Completed Dec 2025</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"I was about to drop out of university due to financial issues. IWT verified my case and donors helped me continue my education. Now I'm in my final year!"</p>
+                        <div class="testimonial-author">
+                            <h4>Ayesha</h4>
+                            <span>Student Case - Completed Nov 2025</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"After my husband passed away, I didn't know how to feed my children. IWT provided monthly ration for 6 months until I could start my small business."</p>
+                        <div class="testimonial-author">
+                            <h4>Fatima</h4>
+                            <span>Ration Case - Completed Jan 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Promise -->
+    <section class="our-promise">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Promise to You</h2>
+                <p>Why donors trust Ismail Welfare Trust</p>
+            </div>
+            <div class="promise-grid">
+                <div class="promise-card">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Every Case is Verified</h3>
+                    <p>We conduct home visits, verify documents, and ensure genuine need before publishing any case.</p>
+                </div>
+                <div class="promise-card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>Regular Updates</h3>
+                    <p>Donors receive updates on funded cases with photos and progress reports.</p>
+                </div>
+                <div class="promise-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Monthly Transparency</h3>
+                    <p>Detailed financial reports published every month showing every rupee received and spent.</p>
+                </div>
+                <div class="promise-card">
+                    <i class="fas fa-mosque"></i>
+                    <h3>Islamic Compliance</h3>
+                    <p>All operations follow Islamic principles. Zakat distributed only to eligible recipients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Change a Life Today</h2>
+                <p>Your Rs. 500 can feed a family for a week. Your Rs. 5,000 can educate a child for a month.</p>
+                <div class="cta-buttons">
+                    <a href="donate.html" class="btn btn-warning btn-large">Donate Now</a>
+                    <a href="#" id="volunteerBtn" class="btn btn-outline btn-large">Volunteer With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Ismail Welfare Trust</h3>
+                    <p>100% Transparent | Verified Cases Only</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="cases.html">Active Cases</a></li>
+                        <li><a href="donate.html">How to Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="reports.html">Transparency Reports</a></li>
+                        <li><a href="success-stories.html">Success Stories</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="islamic-guidelines.html">Islamic Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Monthly Updates</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <p class="newsletter-note">Get monthly impact reports in your inbox</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ismail Welfare Trust. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

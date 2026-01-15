@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Ismail Welfare Trust - Our mission, vision, and commitment to 100% transparency.">
+    <title>About Us - Ismail Welfare Trust</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="Whitelogo.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="Whitelogo.png?v=2">
+    <link rel="shortcut icon" href="Whitelogo.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="Whitelogo.png?v=2">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* About Page - Slide from Left Animation */
+        body { animation: aboutPageLoad 0.8s ease-out; }
+        @keyframes aboutPageLoad {
+            from { opacity: 0; transform: translateX(-100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+    <style>
+        .about-hero {
+            background: rgba(0, 0, 0, 0.3);
+            color: var(--white);
+            padding: 80px 0 60px;
+            text-align: center;
+            border-bottom: 3px solid var(--accent-gold);
+            position: relative;
+            overflow: hidden;
+        }
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 0L100 100M100 0L0 100" stroke="rgba(212,175,55,0.05)" stroke-width="1"/></svg>');
+            opacity: 0.5;
+        }
+        .about-hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: var(--accent-gold);
+            font-family: 'Times New Roman', Times, serif;
+            position: relative;
+            z-index: 1;
+        }
+        .about-hero p {
+            font-size: 18px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--white);
+            font-family: 'Times New Roman', Times, serif;
+            position: relative;
+            z-index: 1;
+        }
+        .mission-section {
+            padding: 80px 0;
+            background: transparent;
+        }
+        .mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .mission-content h2 {
+            font-size: 36px;
+            color: var(--accent-gold);
+            margin-bottom: 25px;
+        }
+        .mission-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        .mission-image {
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid var(--accent-gold);
+        }
+        .mission-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .values-section {
+            padding: 80px 0;
+            background: transparent;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .value-box {
+            background: var(--dark-brown);
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent-gold);
+        }
+        .value-box:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-yellow-gold);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+        .value-box i {
+            font-size: 48px;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+        .value-box h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--accent-gold);
+        }
+        .value-box p {
+            color: var(--white);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .join-us-section {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        .join-us-section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        .join-us-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        .join-options {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 50px auto 0;
+        }
+        .join-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+        .join-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+        .join-card i {
+            font-size: 50px;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        .join-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .join-card p {
+            font-size: 14px;
+            margin-bottom: 25px;
+            opacity: 0.8;
+        }
+        .join-card .btn {
+            background: var(--accent-gold);
+            color: var(--primary-black);
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .join-card .btn:hover {
+            background: var(--accent-yellow-gold);
+            color: var(--primary-black);
+        }
+        .impact-section {
+            padding: 80px 0;
+            background: transparent;
+        }
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .impact-stat {
+            text-align: center;
+            padding: 30px;
+            background: var(--dark-brown);
+            border-radius: 8px;
+            border: 1px solid var(--accent-gold);
+        }
+        .impact-stat h3 {
+            font-size: 42px;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+        .impact-stat p {
+            color: var(--white);
+            font-size: 16px;
+        }
+        @media (max-width: 768px) {
+            .mission-grid, .join-options {
+                grid-template-columns: 1fr;
+            }
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            .impact-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .about-hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body class="about-page">
+    <a href="donate.html" class="sticky-donate-btn">
+        <i class="fas fa-heart"></i> Donate Now
+    </a>
+
+    <a href="https://wa.me/923001234567" target="_blank" class="whatsapp-widget">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <img src="Whitelogo.png" alt="Ismail Welfare Trust Logo">
+                        <span>Ismail Welfare Trust</span>
+                    </div>
+                    <button class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cases.html">Active Cases</a></li>
+                        <li><a href="about.html" class="active">About Us</a></li>
+                        <li><a href="donate.html">How to Donate</a></li>
+                        <li><a href="reports.html">Transparency</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="donate.html" class="btn-primary-nav">Donate Now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="about-hero">
+        <div class="container">
+            <h1>About Ismail Welfare Trust</h1>
+            <p>Transforming Lives Through Verified Support & 100% Transparency</p>
+        </div>
+    </section>
+
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-content">
+                    <h2>Our Mission</h2>
+                    <p>Ismail Welfare Trust (IWT) is a non-profit charitable organization dedicated to helping underprivileged individuals and families across Pakistan. We believe in creating a transparent and trustworthy platform where every rupee donated reaches those who truly need it.</p>
+                    <p>Founded with the vision of eliminating poverty through verified support, we connect generous donors with beneficiaries who have been thoroughly vetted through home visits and document verification.</p>
+                    <p>Our commitment is simple: 100% transparency, 100% impact. Every donation is tracked, every case is verified, and every donor receives regular updates on how their contribution made a difference.</p>
+                </div>
+                <div class="mission-image">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80" alt="Helping hands - charity work">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Values</h2>
+                <p>The principles that guide everything we do</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-box">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>100% Transparency</h3>
+                    <p>Every donation is tracked and reported. Monthly financial reports published for complete accountability.</p>
+                </div>
+                <div class="value-box">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Verified Cases Only</h3>
+                    <p>We personally verify every case through home visits and document checks before publishing.</p>
+                </div>
+                <div class="value-box">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Direct Impact</h3>
+                    <p>100% of your donation goes to the beneficiary. No administrative deductions from charity funds.</p>
+                </div>
+                <div class="value-box">
+                    <i class="fas fa-mosque"></i>
+                    <h3>Islamic Compliance</h3>
+                    <p>All operations follow Islamic principles. Zakat distributed only to eligible recipients.</p>
+                </div>
+                <div class="value-box">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Driven</h3>
+                    <p>We work with local communities to identify genuine cases and ensure proper distribution.</p>
+                </div>
+                <div class="value-box">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Regular Updates</h3>
+                    <p>Donors receive updates with photos and receipts showing exactly how donations were used.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="impact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Impact So Far</h2>
+                <p>Real numbers, real lives transformed</p>
+            </div>
+            <div class="impact-stats">
+                <div class="impact-stat">
+                    <h3 class="stat-number" data-target="247">0</h3>
+                    <p>Families Helped</p>
+                </div>
+                <div class="impact-stat">
+                    <h3>Rs. <span class="stat-number" data-target="3500000">0</span></h3>
+                    <p>Total Donated</p>
+                </div>
+                <div class="impact-stat">
+                    <h3 class="stat-number" data-target="18">0</h3>
+                    <p>Active Cases</p>
+                </div>
+                <div class="impact-stat">
+                    <h3 class="stat-number" data-target="229">0</h3>
+                    <p>Cases Completed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="join-us-section">
+        <div class="container">
+            <h2>Join Us in Making a Difference</h2>
+            <p>There are multiple ways you can contribute to our mission of helping those in need</p>
+            
+            <div class="join-options">
+                <div class="join-card">
+                    <i class="fas fa-donate"></i>
+                    <h3>Become a Donor</h3>
+                    <p>Your financial contribution can change lives. Every amount counts.</p>
+                    <a href="donate.html" class="btn">Start Donating</a>
+                </div>
+                
+                <div class="join-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Volunteer With Us</h3>
+                    <p>Join our team helping verify cases and distribute aid.</p>
+                    <a href="#" class="btn volunteer-btn">Apply Now</a>
+                </div>
+                
+                <div class="join-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Campus Ambassador</h3>
+                    <p>Represent IWT at your university and make a difference.</p>
+                    <a href="#" class="btn campus-ambassador-btn">Apply Now</a>
+                </div>
+                
+                <div class="join-card">
+                    <i class="fas fa-share-alt"></i>
+                    <h3>Spread the Word</h3>
+                    <p>Share our mission and help us reach more people.</p>
+                    <a href="#" class="btn">Share Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Ismail Welfare Trust</h3>
+                    <p>100% Transparent | Verified Cases Only</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="cases.html">Active Cases</a></li>
+                        <li><a href="donate.html">How to Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="reports.html">Transparency Reports</a></li>
+                        <li><a href="success-stories.html">Success Stories</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="islamic-guidelines.html">Islamic Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Monthly Updates</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ismail Welfare Trust. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

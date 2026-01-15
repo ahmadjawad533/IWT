@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Donate Zakat, Sadaqah to Ismail Welfare Trust. Multiple payment methods. 100% transparency. Zakat calculator included.">
+    <title>How to Donate - Ismail Welfare Trust</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="Whitelogo.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="Whitelogo.png?v=2">
+    <link rel="shortcut icon" href="Whitelogo.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="Whitelogo.png?v=2">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Donate Page - Simple Fade In */
+        body { animation: donatePageLoad 0.6s ease-out; }
+        @keyframes donatePageLoad {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .donate-page {
+            padding: 60px 0;
+        }
+        .donation-section {
+            background-color: var(--dark-brown);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            border: 1px solid var(--accent-gold);
+        }
+        .donation-section h2 {
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        .donation-section p {
+            color: var(--white);
+        }
+        .amount-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .amount-btn {
+            padding: 20px;
+            border: 2px solid var(--accent-gold);
+            background-color: transparent;
+            color: var(--accent-gold);
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 18px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .amount-btn:hover,
+        .amount-btn.active {
+            background-color: var(--accent-gold);
+            color: var(--primary-black);
+            transform: translateY(-3px);
+        }
+        .custom-amount {
+            margin-top: 20px;
+        }
+        .custom-amount input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid var(--accent-gold);
+            border-radius: 8px;
+            font-size: 16px;
+            transition: var(--transition);
+            background-color: var(--secondary-brown);
+            color: var(--white);
+        }
+        .custom-amount input:focus {
+            outline: none;
+            border-color: var(--accent-yellow-gold);
+        }
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .payment-card {
+            background-color: var(--secondary-brown);
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid var(--accent-gold);
+            transition: var(--transition);
+        }
+        .payment-card:hover {
+            border-color: var(--accent-yellow-gold);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .payment-card h3 {
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+            align-items: center;
+            gap: 10px;
+        }
+        .payment-card h3 i {
+            font-size: 24px;
+        }
+        .account-details {
+            background-color: var(--secondary-brown);
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid var(--accent-gold);
+        }
+        .account-details p {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+        .account-details strong {
+            color: var(--accent-gold);
+        }
+        .copy-btn {
+            background-color: var(--accent-gold);
+            color: var(--primary-black);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 13px;
+            margin-top: 10px;
+            transition: var(--transition);
+        }
+        .copy-btn:hover {
+            background-color: var(--accent-yellow-gold);
+        }
+        .zakat-calculator {
+            background: linear-gradient(135deg, var(--dark-brown) 0%, var(--secondary-brown) 100%);
+            color: var(--white);
+            padding: 50px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border: 2px solid var(--accent-gold);
+        }
+        .zakat-calculator h2 {
+            color: var(--accent-gold);
+            margin-bottom: 25px;
+        }
+        .calculator-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .form-group input {
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        .zakat-result-box {
+            background-color: var(--dark-brown);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 25px;
+            text-align: center;
+            border: 2px solid var(--accent-gold);
+        }
+        .zakat-result-box h3 {
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+        .zakat-amount {
+            font-size: 24px;
+            color: var(--accent-gold);
+            margin: 20px 0;
+        }
+        }
+        .donation-types {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+            gap: 20px;
+            margin-bottom: 40px;
+            width: 100%;
+            overflow-x: auto;
+        }
+        .donation-type-card {
+            background-color: var(--dark-brown);
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid var(--accent-gold);
+            transition: var(--transition);
+            cursor: pointer;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 0 0 23%;
+            max-width: 23%;
+        }
+        .donation-type-card:hover {
+            border-color: var(--accent-yellow-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+        .donation-type-card i {
+            font-size: 48px;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+        .donation-type-card h3 {
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+        .donation-type-card p {
+            color: var(--white);
+            font-size: 14px;
+        }
+        .important-note {
+            background-color: var(--secondary-brown);
+            border-left: 5px solid var(--accent-gold);
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+            border-radius: 5px;
+            margin: 25px 0;
+        }
+        .important-note h4 {
+            color: var(--secondary-gold);
+            margin-bottom: 10px;
+        }
+        @media (min-width: 1200px) {
+            .donation-types {
+                flex-wrap: nowrap !important;
+            }
+            .donation-type-card {
+                flex: 0 0 23% !important;
+                max-width: 23% !important;
+            }
+        }
+        @media (min-width: 769px) and (max-width: 1199px) {
+            .donation-types {
+                flex-wrap: wrap !important;
+            }
+            .donation-type-card {
+                flex: 0 0 48% !important;
+                max-width: 48% !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .donation-types {
+                flex-wrap: wrap !important;
+            }
+            .donation-type-card {
+                flex: 0 0 48% !important;
+                max-width: 48% !important;
+            }
+            .donation-section {
+                padding: 25px;
+            }
+            .zakat-calculator {
+                padding: 30px 20px;
+            }
+            .amount-selector {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .donation-types {
+                flex-direction: column !important;
+            }
+            .donation-type-card {
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+            }
+        }
+    </style>
+</head>
+<body class="donate-page">
+    <a href="donate.html" class="sticky-donate-btn">
+        <i class="fas fa-heart"></i> Donate Now
+    </a>
+
+    <a href="https://wa.me/923001234567" target="_blank" class="whatsapp-widget" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <img src="Whitelogo.png" alt="Ismail Welfare Trust Logo">
+                        <span>Ismail Welfare Trust</span>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cases.html">Active Cases</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="donate.html" class="active">How to Donate</a></li>
+                        <li><a href="reports.html">Transparency</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="donate.html" class="btn-primary-nav">Donate Now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>How to Donate</h1>
+            <p>Your contribution changes lives. Choose your donation type and payment method below.</p>
+        </div>
+    </section>
+
+    <div class="donate-page">
+        <div class="container">
+            <!-- Donation Types -->
+            <div class="section-header">
+                <h2>Choose Your Donation Type</h2>
+                <p>All donations are 100% transparent and go directly to verified beneficiaries</p>
+            </div>
+
+            <div class="donation-types" style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; justify-content: space-between !important;">
+                <div class="donation-type-card" style="flex: 0 0 23% !important; max-width: 23% !important;">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Zakat</h3>
+                    <p>Obligatory charity for eligible Muslims. Distributed only to Zakat-eligible recipients according to Islamic guidelines.</p>
+                </div>
+                <div class="donation-type-card" style="flex: 0 0 23% !important; max-width: 23% !important;">
+                    <i class="fas fa-heart"></i>
+                    <h3>Sadaqah</h3>
+                    <p>Voluntary charity that can be given anytime. Helps us support all types of verified cases and emergency situations.</p>
+                </div>
+                <div class="donation-type-card" style="flex: 0 0 23% !important; max-width: 23% !important;">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>General Fund</h3>
+                    <p>We distribute to the most urgent cases. Perfect if you want us to allocate your donation where it's needed most.</p>
+                </div>
+                <div class="donation-type-card" style="flex: 0 0 23% !important; max-width: 23% !important;">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>Specific Case</h3>
+                    <p>Support a particular student, medical patient, or family. 100% of your donation goes to that specific case.</p>
+                </div>
+            </div>
+
+            <!-- Zakat Calculator -->
+            <div class="zakat-calculator">
+                <h2><i class="fas fa-calculator"></i> Zakat Calculator</h2>
+                <p>Calculate your Zakat obligation based on your assets. Enter values in Pakistani Rupees (Rs.)</p>
+                
+                <form id="zakat-calculator">
+                    <div class="calculator-form">
+                        <div class="form-group">
+                            <label for="gold">Gold Value (Rs.)</label>
+                            <input type="number" id="gold" placeholder="0" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="silver">Silver Value (Rs.)</label>
+                            <input type="number" id="silver" placeholder="0" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="cash">Cash in Hand/Bank (Rs.)</label>
+                            <input type="number" id="cash" placeholder="0" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="investments">Investments/Stocks (Rs.)</label>
+                            <input type="number" id="investments" placeholder="0" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="business">Business Assets (Rs.)</label>
+                            <input type="number" id="business" placeholder="0" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="debts">Debts Owed (Rs.)</label>
+                            <input type="number" id="debts" placeholder="0" min="0">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-warning btn-large">Calculate My Zakat</button>
+                </form>
+
+                <div id="zakat-result"></div>
+            </div>
+
+            <!-- Quick Donation Amounts -->
+            <div class="donation-section">
+                <h2>Quick Donation</h2>
+                <p>Select an amount or enter your own</p>
+                
+                <div class="amount-selector">
+                    <button class="amount-btn" data-amount="500">Rs. 500</button>
+                    <button class="amount-btn" data-amount="1000">Rs. 1,000</button>
+                    <button class="amount-btn" data-amount="2500">Rs. 2,500</button>
+                    <button class="amount-btn" data-amount="5000">Rs. 5,000</button>
+                    <button class="amount-btn" data-amount="10000">Rs. 10,000</button>
+                    <button class="amount-btn" data-amount="25000">Rs. 25,000</button>
+                </div>
+
+                <div class="custom-amount">
+                    <label for="custom-amount"><strong>Or enter custom amount:</strong></label>
+                    <input type="number" id="custom-amount" placeholder="Enter amount in Rs." min="100">
+                </div>
+
+                <div class="important-note">
+                    <h4><i class="fas fa-info-circle"></i> What Your Donation Can Do</h4>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Rs. 500 - Feed a family for 3 days</li>
+                        <li>Rs. 2,000 - Monthly ration for a widow</li>
+                        <li>Rs. 5,000 - One month education support</li>
+                        <li>Rs. 10,000 - Emergency medical assistance</li>
+                        <li>Rs. 50,000 - Complete semester fees for a student</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Payment Methods -->
+            <div class="donation-section" id="payment-methods">
+                <h2>Payment Methods</h2>
+                <p>Choose your preferred payment method. All methods are secure and verified.</p>
+
+                <div class="payment-methods">
+                    <!-- Bank Transfer -->
+                    <div class="payment-card">
+                        <h3><i class="fas fa-university"></i> Bank Transfer</h3>
+                        <p>Direct bank transfer to our verified account</p>
+                        <div class="account-details">
+                            <p><strong>Bank:</strong> Meezan Bank</p>
+                            <p><strong>Account Title:</strong> Ismail Welfare Trust</p>
+                            <p><strong>Account Number:</strong> 01234567890123</p>
+                            <p><strong>IBAN:</strong> PK12MEZN0001234567890123</p>
+                            <button class="copy-btn" data-copy="PK12MEZN0001234567890123">
+                                <i class="fas fa-copy"></i> Copy IBAN
+                            </button>
+                        </div>
+                        <p style="font-size: 13px; color: var(--white); margin-top: 10px;">
+                            <i class="fas fa-exclamation-circle"></i> Please send payment screenshot to WhatsApp after transfer
+                        </p>
+                    </div>
+
+                    <!-- JazzCash -->
+                    <div class="payment-card">
+                        <h3><i class="fas fa-mobile-alt"></i> JazzCash</h3>
+                        <p>Send money via JazzCash mobile wallet</p>
+                        <div class="account-details">
+                            <p><strong>Account Title:</strong> Ismail Welfare Trust</p>
+                            <p><strong>Mobile Number:</strong> 0300-1234567</p>
+                            <button class="copy-btn" data-copy="03001234567">
+                                <i class="fas fa-copy"></i> Copy Number
+                            </button>
+                        </div>
+                        <p style="font-size: 13px; color: var(--white); margin-top: 10px;">
+                            <i class="fas fa-exclamation-circle"></i> Send screenshot of transaction to confirm
+                        </p>
+                    </div>
+
+                    <!-- EasyPaisa -->
+                    <div class="payment-card">
+                        <h3><i class="fas fa-wallet"></i> EasyPaisa</h3>
+                        <p>Transfer via EasyPaisa mobile account</p>
+                        <div class="account-details">
+                            <p><strong>Account Title:</strong> Ismail Welfare Trust</p>
+                            <p><strong>Mobile Number:</strong> 0321-7654321</p>
+                            <button class="copy-btn" data-copy="03217654321">
+                                <i class="fas fa-copy"></i> Copy Number
+                            </button>
+                        </div>
+                        <p style="font-size: 13px; color: var(--white); margin-top: 10px;">
+                            <i class="fas fa-exclamation-circle"></i> Send screenshot of transaction to confirm
+                        </p>
+                    </div>
+
+                    <!-- Cash Deposit -->
+                    <div class="payment-card">
+                        <h3><i class="fas fa-money-bill-wave"></i> Cash Deposit</h3>
+                        <p>Deposit cash at any Meezan Bank branch</p>
+                        <div class="account-details">
+                            <p><strong>Account Number:</strong> 01234567890123</p>
+                            <p><strong>Account Title:</strong> Ismail Welfare Trust</p>
+                            <button class="copy-btn" data-copy="01234567890123">
+                                <i class="fas fa-copy"></i> Copy Account Number
+                            </button>
+                        </div>
+                        <p style="font-size: 13px; color: var(--white); margin-top: 10px;">
+                            <i class="fas fa-exclamation-circle"></i> Keep deposit slip and send photo to us
+                        </p>
+                    </div>
+
+                    <!-- Hand Delivery -->
+                    <div class="payment-card">
+                        <h3><i class="fas fa-hand-holding-heart"></i> Hand Delivery</h3>
+                        <p>Deliver donation in person at our office</p>
+                        <div class="account-details">
+                            <p><strong>Address:</strong> Office #123, Main Boulevard, Gulberg III, Lahore</p>
+                            <p><strong>Timing:</strong> Mon-Sat, 10 AM - 6 PM</p>
+                            <p><strong>Contact:</strong> 0300-1234567</p>
+                        </div>
+                        <p style="font-size: 13px; color: var(--white); margin-top: 10px;">
+                            <i class="fas fa-exclamation-circle"></i> Official receipt will be provided
+                        </p>
+                    </div>
+
+                    <!-- International -->
+                    <div class="payment-card">
+                        <h3><i class="fas fa-globe"></i> International Donors</h3>
+                        <p>For donors outside Pakistan</p>
+                        <div class="account-details">
+                            <p><strong>Bank:</strong> Meezan Bank</p>
+                            <p><strong>Swift Code:</strong> MEZNPKKA</p>
+                            <p><strong>IBAN:</strong> PK12MEZN0001234567890123</p>
+                            <button class="copy-btn" data-copy="PK12MEZN0001234567890123">
+                                <i class="fas fa-copy"></i> Copy IBAN
+                            </button>
+                        </div>
+                        <p style="font-size: 13px; color: var(--white); margin-top: 10px;">
+                            <i class="fas fa-exclamation-circle"></i> Contact us for Western Union or other options
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- After Donation -->
+            <div class="donation-section">
+                <h2><i class="fas fa-check-circle"></i> After Making Your Donation</h2>
+                <div style="background-color: var(--bg-light); padding: 25px; border-radius: 8px; margin-top: 20px;">
+                    <ol style="margin-left: 20px; line-height: 2;">
+                        <li><strong>Send Confirmation:</strong> WhatsApp your payment screenshot to <strong>0300-1234567</strong></li>
+                        <li><strong>Specify Purpose:</strong> Mention if it's Zakat, Sadaqah, or for a specific case</li>
+                        <li><strong>Provide Details:</strong> Share your name and contact number for receipt</li>
+                        <li><strong>Get Receipt:</strong> We'll send you an official receipt within 24 hours</li>
+                        <li><strong>Track Impact:</strong> Receive updates on how your donation was used</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="donation-section">
+                <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+                <div style="margin-top: 25px;">
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: var(--accent-gold); margin-bottom: 10px;">Is my donation 100% used for beneficiaries?</h4>
+                        <p style="color: var(--white);">Yes! 100% of your donation goes directly to the beneficiary. Our operational costs are covered separately by dedicated donors.</p>
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: var(--accent-gold); margin-bottom: 10px;">Will I get a receipt?</h4>
+                        <p style="color: var(--white);">Absolutely. We provide official receipts for all donations within 24 hours of confirmation.</p>
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: var(--accent-gold); margin-bottom: 10px;">Can I donate for a specific case?</h4>
+                        <p style="color: var(--white);">Yes! Visit our <a href="cases.html" style="color: var(--accent-gold); font-weight: 600;">Active Cases</a> page and mention the case ID when sending your donation confirmation.</p>
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: var(--accent-gold); margin-bottom: 10px;">How do I know my donation was used properly?</h4>
+                        <p style="color: var(--white);">We send updates with photos and receipts showing how your donation was distributed. Check our <a href="reports.html" style="color: var(--accent-gold); font-weight: 600;">Transparency Reports</a> for monthly details.</p>
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: var(--accent-gold); margin-bottom: 10px;">Is Zakat distributed according to Islamic guidelines?</h4>
+                        <p style="color: var(--white);">Yes. All Zakat donations are distributed only to Zakat-eligible recipients as per Islamic Shariah. We maintain separate records for Zakat and Sadaqah.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact for Help -->
+            <div class="important-note">
+                <h4><i class="fas fa-headset"></i> Need Help?</h4>
+                <p>If you have any questions about donating or need assistance, please contact us:</p>
+                <p style="margin-top: 10px;">
+                    <strong>WhatsApp:</strong> 0300-1234567 | 
+                    <strong>Email:</strong> donate@ismailwelfaretrust.org | 
+                    <strong>Phone:</strong> 042-12345678
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Every Contribution Counts</h2>
+                <p>Your donation today can transform someone's tomorrow. Join us in making a difference.</p>
+                <a href="#payment-methods" class="btn btn-warning btn-large">Donate Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Ismail Welfare Trust</h3>
+                    <p>100% Transparent | Verified Cases Only</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="cases.html">Active Cases</a></li>
+                        <li><a href="donate.html">How to Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="reports.html">Transparency Reports</a></li>
+                        <li><a href="success-stories.html">Success Stories</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="islamic-guidelines.html">Islamic Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Monthly Updates</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <p class="newsletter-note">Get monthly impact reports in your inbox</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ismail Welfare Trust. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

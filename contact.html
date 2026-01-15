@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ismail Welfare Trust</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="Whitelogo.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="Whitelogo.png?v=2">
+    <link rel="shortcut icon" href="Whitelogo.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="Whitelogo.png?v=2">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Contact Page - Simple Fade In */
+        body { animation: contactPageLoad 0.6s ease-out; }
+        @keyframes contactPageLoad {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="contact-page">
+    <a href="donate.html" class="sticky-donate-btn"><i class="fas fa-heart"></i> Donate Now</a>
+    <a href="https://wa.me/923001234567" target="_blank" class="whatsapp-widget"><i class="fab fa-whatsapp"></i></a>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo"><img src="Whitelogo.png" alt="Ismail Welfare Trust Logo"><span>Ismail Welfare Trust</span></div>
+                    <button class="mobile-menu-toggle"><span></span><span></span><span></span></button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cases.html">Active Cases</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="donate.html">How to Donate</a></li>
+                        <li><a href="reports.html">Transparency</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                        <li><a href="donate.html" class="btn-primary-nav">Donate Now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with us for any queries or support</p>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+                <div>
+                    <h2 style="margin-bottom: 30px;">Get In Touch</h2>
+                    <form id="contact-form" style="display: flex; flex-direction: column; gap: 20px;">
+                        <input type="text" id="name" placeholder="Your Name" required style="padding: 15px; border: 2px solid #e0e0e0; border-radius: 5px;">
+                        <input type="email" id="email" placeholder="Your Email" required style="padding: 15px; border: 2px solid #e0e0e0; border-radius: 5px;">
+                        <input type="tel" id="phone" placeholder="Your Phone" required style="padding: 15px; border: 2px solid #e0e0e0; border-radius: 5px;">
+                        <textarea id="message" placeholder="Your Message" rows="6" required style="padding: 15px; border: 2px solid #e0e0e0; border-radius: 5px;"></textarea>
+                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                    </form>
+                </div>
+                <div>
+                    <h2 style="margin-bottom: 30px;">Contact Information</h2>
+                    <div style="display: flex; flex-direction: column; gap: 25px;">
+                        <div style="display: flex; gap: 15px; align-items: start;">
+                            <i class="fas fa-map-marker-alt" style="font-size: 24px; color: var(--primary-black); margin-top: 5px;"></i>
+                            <div>
+                                <h4 style="margin-bottom: 5px;">Address</h4>
+                                <p style="color: var(--text-gray);">Office #123, Main Boulevard<br>Gulberg III, Lahore, Pakistan</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 15px; align-items: start;">
+                            <i class="fas fa-phone" style="font-size: 24px; color: var(--primary-black); margin-top: 5px;"></i>
+                            <div>
+                                <h4 style="margin-bottom: 5px;">Phone</h4>
+                                <p style="color: var(--text-gray);">+92 300 1234567<br>+92 42 12345678</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 15px; align-items: start;">
+                            <i class="fas fa-envelope" style="font-size: 24px; color: var(--primary-black); margin-top: 5px;"></i>
+                            <div>
+                                <h4 style="margin-bottom: 5px;">Email</h4>
+                                <p style="color: var(--text-gray);">info@ismailwelfaretrust.org<br>donate@ismailwelfaretrust.org</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 15px; align-items: start;">
+                            <i class="fas fa-clock" style="font-size: 24px; color: var(--primary-black); margin-top: 5px;"></i>
+                            <div>
+                                <h4 style="margin-bottom: 5px;">Office Hours</h4>
+                                <p style="color: var(--text-gray);">Monday - Saturday: 10 AM - 6 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Ismail Welfare Trust</h3>
+                    <p>100% Transparent | Verified Cases Only</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="cases.html">Active Cases</a></li>
+                        <li><a href="donate.html">How to Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="reports.html">Transparency Reports</a></li>
+                        <li><a href="success-stories.html">Success Stories</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="islamic-guidelines.html">Islamic Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Monthly Updates</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ismail Welfare Trust. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/script.js"></script>
+</body>
+</html>
