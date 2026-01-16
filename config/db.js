@@ -3,11 +3,13 @@ const mongoose = require('mongoose');
 let isConnected = false;
 
 const connectDB = async () => {
-    if (isConnected) return;
-
+    // ✅ If no MongoDB yet, SKIP safely
     if (!process.env.MONGODB_URI) {
-        throw new Error("MONGODB_URI is missing");
+        console.warn('MongoDB not configured. Skipping DB connection.');
+        return;
     }
+
+    if (isConnected) return;
 
     try {
         await mongoose.connect(process.env.MONGODB_URI);
@@ -15,7 +17,7 @@ const connectDB = async () => {
         console.log('MongoDB Connected');
     } catch (error) {
         console.error('MongoDB connection error:', error);
-        throw error; // ❌ no process.exit
+        // ❌ DO NOT throw
     }
 };
 
