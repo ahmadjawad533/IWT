@@ -26,6 +26,10 @@
     {
       "src": "/(.*)",
       "dest": "/$1"
+    },
+    {
+     "src": "images/**",
+      "use": "@vercel/static" 
     }
   ]
 }
