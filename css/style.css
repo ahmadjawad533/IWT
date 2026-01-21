@@ -21,10 +21,15 @@
 }
 
 /* ===== Reset & Base Styles ===== */
+/* ===== Base Responsive Fixes ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 body {
@@ -35,6 +40,8 @@ body {
     background-attachment: fixed;
     min-height: 100vh;
     position: relative;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body::before {
@@ -44,7 +51,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1600&q=80') center/cover;
+    background: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1600&q=80') center/cover;
     opacity: 0.06;
     z-index: -1;
     pointer-events: none;
@@ -77,10 +84,43 @@ ul {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .text-center {
     text-align: center;
+}
+
+/* ===== Page Hero Section ===== */
+.page-hero {
+    background: linear-gradient(135deg, var(--dark-brown) 0%, var(--secondary-brown) 50%, var(--accent-gold) 100%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--white);
+    padding: 80px 0 60px;
+    text-align: center;
+    border-bottom: 3px solid var(--accent-gold);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.page-hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: var(--accent-gold);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.page-hero p {
+    font-size: 18px;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--white);
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* ===== Buttons ===== */
@@ -288,7 +328,7 @@ ul {
 
 /* ===== Hero Section ===== */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1600&q=80');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600&q=80');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -883,6 +923,8 @@ ul {
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .newsletter-form input {
@@ -894,6 +936,7 @@ ul {
     background-color: var(--dark-brown);
     color: var(--white);
     font-family: 'Times New Roman', Times, serif;
+    min-width: 0;
 }
 
 .newsletter-form input::placeholder {
@@ -902,6 +945,8 @@ ul {
 
 .newsletter-form button {
     padding: 12px 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .newsletter-note {
@@ -1089,6 +1134,107 @@ ul {
         flex-direction: column;
         text-align: center;
     }
+    
+    /* Additional responsive fixes */
+    body {
+        overflow-x: hidden;
+    }
+    
+    .container {
+        padding: 0 15px;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .logo span {
+        display: none;
+    }
+    
+    .page-hero {
+        padding: 60px 0 40px;
+        background-attachment: scroll;
+    }
+    
+    .page-hero h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    
+    .page-hero p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+        max-width: 100%;
+    }
+    
+    .newsletter-form input {
+        width: 100%;
+    }
+    
+    .newsletter-form button {
+        width: 100%;
+    }
+    
+    /* Donate page specific fixes */
+    .donation-types {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    
+    .donation-type-card {
+        flex: none !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    .amount-selector {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .amount-btn {
+        padding: 15px 10px;
+        font-size: 16px;
+    }
+    
+    .payment-methods {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .payment-card {
+        padding: 20px;
+    }
+    
+    /* Cases grid responsive */
+    .cases-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Stats grid responsive */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* Promise grid responsive */
+    .promise-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Footer grid responsive */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1118,6 +1264,46 @@ ul {
     
     .newsletter-form {
         flex-direction: column;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+    
+    .page-hero {
+        padding: 50px 0 30px;
+    }
+    
+    .page-hero h1 {
+        font-size: 24px;
+    }
+    
+    .page-hero p {
+        font-size: 14px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .amount-selector {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .sticky-donate-btn {
+        right: 5px;
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+    
+    .whatsapp-widget {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+        bottom: 15px;
+        right: 15px;
     }
 }
 
@@ -1264,19 +1450,19 @@ body.home-page::before {
 
 /* About Page Background */
 body.about-page::before {
-    background: url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1600&q=80') center/cover;
+    background: url('https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1600&q=80') center/cover;
     opacity: 0.07;
 }
 
 /* Cases Page Background */
 body.cases-page::before {
-    background: url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1600&q=80') center/cover;
+    background: url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1600&q=80') center/cover;
     opacity: 0.07;
 }
 
 /* Donate Page Background */
 body.donate-page::before {
-    background: url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1600&q=80') center/cover;
+    background: url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1600&q=80') center/cover;
     opacity: 0.07;
 }
 
