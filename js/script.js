@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
             
-            // Check if the form URL has been set
+            // Check if the form URL has been set 
             if (VOLUNTEER_FORM_URL === 'YOUR_GOOGLE_FORM_URL_HERE') {
                 alert('Volunteer form is being set up. Please contact us directly or check back soon!');
                 console.warn('Please update VOLUNTEER_FORM_URL in script.js with your actual Google Form URL');
