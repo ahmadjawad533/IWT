@@ -103,7 +103,7 @@ ul {
     text-align: center;
     border-bottom: 3px solid var(--accent-gold);
     position: relative;
-    overflow: hidden;
+    overflow: hidden; 
     width: 100%;
 }
 
