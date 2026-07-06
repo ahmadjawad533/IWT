@@ -1,6 +1,6 @@
-# Ismail Welfare Trust - Backend API
+# Ismail Welfare Trust 
 
-Complete backend for IWT charity management system.
+Complete  for IWT charity management system.
 
 ## Features
 - Case management (CRUD operations)
