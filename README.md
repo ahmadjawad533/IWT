@@ -1,6 +1,6 @@
 # Ismail Welfare Trust 
 
-Complete  for IWT charity management system.
+Complete for IWT charity management system.
 
 ## Features
 - Case management (CRUD operations)
